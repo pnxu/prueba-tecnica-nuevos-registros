@@ -8,7 +8,7 @@ const initialState = [
     patenteVehiculo: "AB1234",
     marcaVehiculo: "Chevrolet",
     modeloVehiculo: "Onix Sedan",
-    colorVehiculo: "Rojo",
+    precioVehiculo: "10.000.000",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const initialState = [
     patenteVehiculo: "FG9012",
     marcaVehiculo: "Ford",
     modeloVehiculo: "Mustang",
-    colorVehiculo: "Azul",
+    precioVehiculo: "8.000.000",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const initialState = [
     patenteVehiculo: "OJ4567",
     marcaVehiculo: "Nissan",
     modeloVehiculo: "Rogue",
-    colorVehiculo: "Blanco",
+    precioVehiculo: "3.000.000",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const initialState = [
     patenteVehiculo: "KL8901",
     marcaVehiculo: "Toyota",
     modeloVehiculo: "Camry",
-    colorVehiculo: "Negro",
+    precioVehiculo: "1.000.000",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const initialState = [
     patenteVehiculo: "HI9305",
     marcaVehiculo: "Ford",
     modeloVehiculo: "F-150",
-    colorVehiculo: "Blanco",
+    precioVehiculo: "7.000.000",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const initialState = [
     patenteVehiculo: "IP9837",
     marcaVehiculo: "Toyota",
     modeloVehiculo: "Camry",
-    colorVehiculo: "Negro",
+    precioVehiculo: "14.000.000",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const initialState = [
     patenteVehiculo: "CD5678",
     marcaVehiculo: "Toyota",
     modeloVehiculo: "Corolla",
-    colorVehiculo: "Blanco",
+    precioVehiculo: "12.000.000",
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ const initialState = [
     patenteVehiculo: "OP2940",
     marcaVehiculo: "Toyota",
     modeloVehiculo: "Corolla",
-    colorVehiculo: "Azul",
+    precioVehiculo: "4.000.000",
   },
   {
     id: 9,
@@ -80,7 +80,7 @@ const initialState = [
     patenteVehiculo: "VI7592",
     marcaVehiculo: "Nissan",
     modeloVehiculo: "Rogue",
-    colorVehiculo: "Negro",
+    precioVehiculo: "9.000.000",
   },
   {
     id: 10,
@@ -89,7 +89,7 @@ const initialState = [
     patenteVehiculo: "VJ2845",
     marcaVehiculo: "Honda",
     modeloVehiculo: "Civic",
-    colorVehiculo: "Verde",
+    precioVehiculo: "2.000.000",
   },
 ];
 
