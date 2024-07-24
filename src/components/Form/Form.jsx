@@ -1,11 +1,11 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import {
   FormSection,
   FormContainer,
   TitleContainer,
   Title,
   Text,
-  FormWrapper,
   FormInput,
   Divisor,
   ButtonContainer,
@@ -13,6 +13,9 @@ import {
 } from "./StyledForm";
 
 function Form() {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   return (
     <FormSection>
       <FormContainer>
@@ -24,23 +27,45 @@ function Form() {
             text ever since.
           </Text>
         </TitleContainer>
-        <FormWrapper>
-          <form>
-            <Title size="small">Datos del vendedor:</Title>
-            <FormInput size="large" placeholder="Nombre Completo" />
-            <FormInput size="small" placeholder="Rut Vendedor" />
-            <Divisor />
-            <Title size="small">Datos del vehículo:</Title>
-            <FormInput size="small" placeholder="Patente del vehículo" />
-            <FormInput size="small" placeholder="Marca del vehículo" />
-            <FormInput size="small" placeholder="Modelo del vehículo" />
-            <FormInput size="small" placeholder="Precio del vehículo" />
-            <Divisor />
-            <ButtonContainer>
-              <Button> Enviar</Button>
-            </ButtonContainer>
-          </form>
-        </FormWrapper>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Title size="small">Datos del vendedor:</Title>
+          <FormInput
+            size="large"
+            placeholder="Nombre Completo"
+            {...register("nombreCompleto")}
+          />
+          <FormInput
+            size="small"
+            placeholder="Rut Vendedor"
+            {...register("rutVendedor")}
+          />
+          <Divisor />
+          <Title size="small">Datos del vehículo:</Title>
+          <FormInput
+            size="small"
+            placeholder="Patente del vehículo"
+            {...register("patenteVehiculo")}
+          />
+          <FormInput
+            size="small"
+            placeholder="Marca del vehículo"
+            {...register("marcaVehiculo")}
+          />
+          <FormInput
+            size="small"
+            placeholder="Modelo del vehículo"
+            {...register("modeloVehiculo")}
+          />
+          <FormInput
+            size="small"
+            placeholder="Precio del vehículo"
+            {...register("precioVehiculo")}
+          />
+          <Divisor />
+          <ButtonContainer>
+            <Button type="submit">Enviar</Button>
+          </ButtonContainer>
+        </form>
       </FormContainer>
     </FormSection>
   );
