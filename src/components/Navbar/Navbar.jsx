@@ -1,15 +1,24 @@
-import React from "react";
-import { Nav } from "./Nav.js";
-import { NavLink } from "./NavLink.js";
+import { Nav, NavLink } from "./StyledNav.js";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
   return (
-    <React.Fragment>
-      <Nav>
-        <NavLink to="/formulario">Formulario</NavLink>
-        <NavLink>Lista Formulario</NavLink>
-      </Nav>
-    </React.Fragment>
+    <Nav>
+      <NavLink
+        to="/formulario"
+        isactive={(location.pathname === "/formulario").toString()}
+      >
+        Formulario
+      </NavLink>
+      <NavLink
+        to="/lista-formulario"
+        isactive={(location.pathname === "/lista-formulario").toString()}
+      >
+        Lista Formulario
+      </NavLink>
+    </Nav>
   );
 }
 
