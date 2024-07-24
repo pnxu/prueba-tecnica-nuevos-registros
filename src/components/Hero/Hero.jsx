@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { HeroContainer, Title, BoldTitle } from "./HeroContainer";
-
-const Image = styled.img``;
+import { HeroContainer, Title, BoldTitle, Image, Divisor } from "./StyledHero";
+const illustrationPath = "../../../src/assets/Illustration.png";
 
 function Hero() {
   return (
@@ -11,7 +9,8 @@ function Hero() {
         <Title>
           Formulario <BoldTitle> de Prueba </BoldTitle>
         </Title>
-        <Image src="../../src/assets/1.png" alt="Formulario de Prueba" />
+        <Image src={illustrationPath} alt="Formulario de Prueba" />
+        <Divisor />
       </HeroContainer>
     </React.Fragment>
   );
