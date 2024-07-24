@@ -23,6 +23,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h2`
+margin-top: 20px;
   font-size: ${(props) => (props.size === "large" ? "30px" : "20px")};
   font-weight: 600;
   color: black;
@@ -36,20 +37,6 @@ export const Text = styled.p`
   font-size: 18px;
   color: #191919;
   margin-top: 20px;
-`;
-
-export const FormWrapper = styled.form`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  gap: 20px;
-  align-items: center;
-  margin-top: 60px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-top: 20px;
-  }
 `;
 
 export const FormInput = styled.input`
