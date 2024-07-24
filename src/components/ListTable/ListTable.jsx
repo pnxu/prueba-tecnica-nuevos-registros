@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteUser } from "../../features/users/usersSlice";
 import {
   TableSection,
   TableContainer,
@@ -11,14 +13,22 @@ import {
   TableHeader,
   TableBody,
   TableData,
-  TableIcon,
+  ButtonContainer,
+  Button,
   TableCounter,
-  Divisor,
 } from "./StyledTable.js";
 
 const deleteIcon = "../../../src/assets/Eliminar.png";
 
 function ListTable() {
+  const users = useSelector((state) => state.users);
+  const dispatch = useDispatch();
+
+  const handleDelete = (id) => {
+    dispatch(deleteUser(id));
+    console.log(id);
+  };
+
   return (
     <TableSection>
       <TitleContainer>
@@ -43,24 +53,30 @@ function ListTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow>
-              <TableData>Nombre</TableData>
-              <TableData>Rut vendedor</TableData>
-              <TableData>Patente vehículo</TableData>
-              <TableData>Marca vehículo</TableData>
-              <TableData>Modelo vehículo</TableData>
-              <TableData>Color vehículo</TableData>
-              <TableIcon>
-                <img src={deleteIcon} alt="Eliminar" />
-              </TableIcon>
-            </TableRow>
+            {users.map((user) => (
+              <TableRow key={user.id}>
+                <TableData>{user.nombreCompleto}</TableData>
+                <TableData>{user.rutVendedor}</TableData>
+                <TableData>{user.patenteVehiculo}</TableData>
+                <TableData>{user.marcaVehiculo}</TableData>
+                <TableData>{user.modeloVehiculo}</TableData>
+                <TableData>{user.colorVehiculo}</TableData>
+                <TableData>
+                  <ButtonContainer>
+                    <Button onClick={() => handleDelete(user.id)}>
+                      <img src={deleteIcon} alt="Eliminar" />
+                    </Button>
+                  </ButtonContainer>
+                </TableData>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
-        <Divisor />
       </TableContainer>
       <TableCounter>
         <Text>
-          Mostrando registros del 1 al 10 de un total de 10 registros.
+          Mostrando registros del 1 al {users.length} de un total de{" "}
+          {users.length} registros.
         </Text>
       </TableCounter>
     </TableSection>
