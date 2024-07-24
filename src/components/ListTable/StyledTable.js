@@ -39,7 +39,9 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead``;
 
-export const TableRow = styled.tr``;
+export const TableRow = styled.tr`
+  border-bottom: 1px solid #ddd;
+`;
 
 export const TableHeader = styled.th`
   padding: 8px;
@@ -47,6 +49,7 @@ export const TableHeader = styled.th`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.9;
+  border-bottom: 1px solid #ddd;
 `;
 
 export const TableBody = styled.tbody``;
@@ -56,15 +59,31 @@ export const TableData = styled.td`
   text-align: center;
   font-size: 16px;
   font-weight: 400;
+  border-bottom: 1px solid #ddd;
+  line-height: 2;
+  color: ##191919;
 `;
 
-export const TableIcon = styled.i`
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
   justify-content: center;
 
   img {
     width: 24px;
     height: 24px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 `;
 
@@ -74,10 +93,5 @@ export const TableCounter = styled.div`
   padding: 20px;
   text-align: center;
   font-size: 16px;
-`;
-
-export const Divisor = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
+  color: #000;
 `;
