@@ -40,7 +40,7 @@ function Form() {
 
   const onSubmit = (data) => {
     try {
-      dispatch(addUser({ ...data, id: uuidv4(), colorVehiculo: "Negro" }));
+      dispatch(addUser({ ...data, id: uuidv4() }));
       navigate("/lista-formulario");
     } catch (error) {
       console.log(error);
