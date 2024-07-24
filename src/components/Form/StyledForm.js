@@ -47,6 +47,29 @@ export const FormInput = styled.input`
   font-size: 16px;
   outline: none;
   transition: 0.3s;
+  color: #5e5d5b;
+  width: ${(props) => (props.size === "large" ? "540px" : "255px")};
+
+  &:focus {
+    border-color: #002eff;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 10px 0;
+  }
+`;
+
+export const FormSelectInput = styled.select`
+  padding: 14px;
+  margin: 15px 10px;
+  border-radius: 5px;
+  border: 2px solid #002eff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #5e5d5b;
   width: ${(props) => (props.size === "large" ? "540px" : "255px")};
 
   &:focus {
@@ -98,4 +121,10 @@ export const Button = styled.button`
   @media (max-width: 768px) {
     width: 60%;
   }
+`;
+
+export const ErrorSpan = styled.span`
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
 `;
