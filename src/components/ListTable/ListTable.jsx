@@ -48,7 +48,7 @@ function ListTable() {
               <TableHeader>Patente vehículo</TableHeader>
               <TableHeader>Marca vehículo</TableHeader>
               <TableHeader>Modelo vehículo</TableHeader>
-              <TableHeader>Color vehículo</TableHeader>
+              <TableHeader>Precio vehículo</TableHeader>
               <TableHeader>Eliminar</TableHeader>
             </TableRow>
           </TableHead>
@@ -60,7 +60,7 @@ function ListTable() {
                 <TableData>{user.patenteVehiculo}</TableData>
                 <TableData>{user.marcaVehiculo}</TableData>
                 <TableData>{user.modeloVehiculo}</TableData>
-                <TableData>{user.colorVehiculo}</TableData>
+                <TableData>{user.precioVehiculo}</TableData>
                 <TableData>
                   <ButtonContainer>
                     <Button onClick={() => handleDelete(user.id)}>
