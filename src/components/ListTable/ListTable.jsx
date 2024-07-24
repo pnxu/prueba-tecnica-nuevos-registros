@@ -18,7 +18,7 @@ import {
   TableCounter,
 } from "./StyledTable.js";
 
-const deleteIcon = "../../../public/assets/deleteIcon.png";
+const deleteIcon = "/public/assets/Eliminar.png";
 
 function ListTable() {
   const users = useSelector((state) => state.users);

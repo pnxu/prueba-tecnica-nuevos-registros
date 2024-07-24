@@ -1,6 +1,6 @@
 import React from "react";
 import { HeroContainer, Title, BoldTitle, Image, Divisor } from "./StyledHero";
-const illustrationPath = "../../../public/assets/Illustration.png";
+const illustrationPath = "/public/assets/Illustration.png";
 
 function Hero() {
   return (
