@@ -1,7 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Form from "./views/Form";
+import MainForm from "./views/MainForm";
+import ListForm from "./views/ListForm";
 import "./App.css";
 
 function App() {
@@ -10,9 +16,9 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Form />} />
-          <Route path="/formulario" element={<Form />} />
-          {/* <Route path="/lista-formulario" component={ListForm} /> */}
+          <Route path="/formulario" element={<MainForm />} />
+          <Route path="/lista-formulario" element={<ListForm />} />
+          <Route path="/" element={<Navigate to="/formulario" />} />
         </Routes>
       </div>
     </Router>
