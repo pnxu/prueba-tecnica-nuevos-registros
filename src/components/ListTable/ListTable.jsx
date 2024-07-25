@@ -24,6 +24,10 @@ function ListTable() {
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
+  const sortedUsers = [...users].sort(
+    (a, b) => new Date(b.fechaVenta) - new Date(a.fechaVenta)
+  );
+
   const handleDelete = (id) => {
     dispatch(deleteUser(id));
     console.log(id);
@@ -53,7 +57,7 @@ function ListTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {users.map((user) => (
+            {sortedUsers.map((user) => (
               <TableRow key={user.id}>
                 <TableData>{user.nombreCompleto}</TableData>
                 <TableData>{user.rutVendedor}</TableData>
