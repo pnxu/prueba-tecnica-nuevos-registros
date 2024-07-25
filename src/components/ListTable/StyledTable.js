@@ -94,4 +94,5 @@ export const TableCounter = styled.div`
   text-align: center;
   font-size: 16px;
   color: #000;
+  margin-bottom: 50px;
 `;
