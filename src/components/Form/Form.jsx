@@ -39,8 +39,9 @@ function Form() {
   };
 
   const onSubmit = (data) => {
+    const date = new Date().toISOString();
     try {
-      dispatch(addUser({ ...data, id: uuidv4() }));
+      dispatch(addUser({ ...data, id: uuidv4(), fechaVenta: date }));
       navigate("/lista-formulario");
     } catch (error) {
       console.log(error);
